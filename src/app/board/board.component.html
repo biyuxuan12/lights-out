@@ -1,0 +1,7 @@
+<ng-template #light let-row="row"><span>Hello {{row}}!</span>
+<button mat-raised-button [color]=getStatus() (click)="handleLight(row)" ></button>
+
+</ng-template>
+
+
+<ng-container *ngTemplateOutlet="light; context:{row: 1}"></ng-container>
