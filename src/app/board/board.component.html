@@ -1,7 +1,12 @@
-<ng-template #light let-row="row"><span>Hello {{row}}!</span>
-<button mat-raised-button [color]=getStatus() (click)="handleLight(row)" ></button>
-
+<ng-template #light let-row="row" let-column="column">
+  <button mat-fab [class]=getStatus(row,column) (click)="handleAround(row,column)" flex="20%"></button>
 </ng-template>
-
-
-<ng-container *ngTemplateOutlet="light; context:{row: 1}"></ng-container>
+<div style="width: 2000px">
+<div fxLayout="column wrap" flex="100%" *ngFor="let line of  [].constructor(rank); let row = index">
+  <div fxLayout="row wrap" flex="100%">
+    <div *ngFor="let item of  [].constructor(rank); let column = index" >
+      <ng-container *ngTemplateOutlet="light; context:{row,column}" ></ng-container>
+    </div>
+  </div>
+</div>
+</div>

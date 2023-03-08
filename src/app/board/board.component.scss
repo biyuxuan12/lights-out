@@ -1,7 +1,11 @@
 
-.mat-lightsOff{
+.lightsOff{
   background-color: #696969 !important;
 }
-.mat-lightsOn{
+.lightsOn{
   background-color: #FFA500 !important;
+}
+.mdc-fab {
+  width: var(--light-width);
+  height: var(--light-width);
 }

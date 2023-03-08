@@ -6,8 +6,9 @@ import {AppComponent} from './app.component';
 import {BoardComponent} from './board/board.component';
 import {MatButtonModule} from '@angular/material/button';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatIcon, MatIconModule} from "@angular/material/icon";
-import {MatDivider, MatDividerModule} from "@angular/material/divider";
+import {MatIconModule} from "@angular/material/icon";
+import {MatDividerModule} from "@angular/material/divider";
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import {MatDivider, MatDividerModule} from "@angular/material/divider";
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [BoardComponent]
