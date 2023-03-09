@@ -1,0 +1,22 @@
+<mat-sidenav-container class="example-container" >
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+               (closed)="events.push('close!')">
+    Sidenav content
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <button mat-flat-button class="float-button" (click)="sidenav.toggle()">
+    <mat-icon *ngIf="opened else errorForward">arrow_back_ios</mat-icon>
+    <ng-template #errorForward>
+      <mat-icon >arrow_forward_ios</mat-icon>
+    </ng-template>
+    </button>
+    <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p>
+    <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
+    <p>Events:</p>
+    <div class="example-events">
+      <div *ngFor="let e of events">{{e}}</div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
